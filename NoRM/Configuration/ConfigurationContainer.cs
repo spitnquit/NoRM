@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Globalization;
 using Norm.BSON.TypeConverters;
 namespace Norm.Configuration
@@ -11,6 +12,7 @@ namespace Norm.Configuration
         public ConfigurationContainer()
         {
             TypeConverterFor<CultureInfo, CultureInfoTypeConverter>();
+            TypeConverterFor<TimeSpan, TimeSpanTypeConverter>();
         }
 
         /// <summary>
